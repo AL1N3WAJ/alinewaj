@@ -16,19 +16,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
 
-      - name: Install dependencies
-        run: npm install     # ← Changed to npm install
+      - name: Install Dependencies
+        run: npm install --legacy-peer-deps   # ← This line is fixed
 
-      - name: Build with Astro
+      - name: Build Astro Site
         run: npm run build
 
-      - name: Upload artifact
+      - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
