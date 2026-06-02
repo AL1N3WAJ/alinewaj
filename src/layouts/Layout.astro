@@ -1,0 +1,17 @@
+---
+const { title = "Ali Newaj" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content="Physics undergraduate exploring the universe through code, simulations, and astrophotography." />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="bg-space-bg text-white overflow-x-hidden">
+  <slot />
+</body>
+</html>
