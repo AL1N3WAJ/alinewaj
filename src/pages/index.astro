@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<Layout title="Ali Newaj - Physics Portfolio">
+  <Hero />
+
+  <section class="py-24 px-6 max-w-5xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-12">What I Do</h2>
+    <div class="grid md:grid-cols-3 gap-8 text-center">
+      <div class="reveal p-6"><h3 class="text-2xl mb-3">Physics Simulations</h3><p class="text-gray-400">Interactive models of physical systems</p></div>
+      <div class="reveal p-6"><h3 class="text-2xl mb-3">Astrophotography</h3><p class="text-gray-400">Capturing the night sky from Bangladesh</p></div>
+      <div class="reveal p-6"><h3 class="text-2xl mb-3">Scientific Visualization</h3><p class="text-gray-400">Turning data into beautiful visuals</p></div>
+    </div>
+  </section>
+
+  <section id="projects" class="py-24 px-6 bg-black/40">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-12">Featured Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <ProjectCard title="Thermodynamics Simulator" desc="Interactive entropy and heat transfer visualization" />
+        <ProjectCard title="Orbital Mechanics" desc="Realistic n-body planetary simulation" />
+        <ProjectCard title="Stellar Evolution" desc="Visualizing star life cycles and supernovae" />
+        <ProjectCard title="Astrophotography Gallery" desc="Deep sky objects captured from Bangladesh" />
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-24 px-6 max-w-3xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-12">Let's Connect</h2>
+    <form action="https://formsubmit.co/YOUR_EMAIL@gmail.com" method="POST" class="space-y-6">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-space-accent outline-none">
+      <input type="email" name="email" placeholder="Your Email" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-space-accent outline-none">
+      <textarea name="message" rows="6" placeholder="Your Message" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:border-space-accent outline-none resize-none"></textarea>
+      <button type="submit" class="w-full bg-space-accent hover:bg-violet-600 py-4 rounded-2xl font-medium text-lg transition">Send Message</button>
+    </form>
+  </section>
+</Layout>
